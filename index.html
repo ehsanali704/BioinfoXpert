@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioinfoXpert - Bioinformatics Solutions</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: url('./360_F_946955174_f6IWVVtjhzFXv2NshSBsvGm1lAQ0G2Y7.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(5px);
+            z-index: -1;
+        }
+
+        /* Navbar Styling */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            width: 100%;
+            background: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav ul li {
+            display: inline;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .nav .contact-btn {
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .wonder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 80vh;
+            width: 100%;
+            margin-top: 80px;
+            background: rgba(47, 193, 212, 0.7);
+            border-radius: 10px;
+        }
+
+        .wonder h1 {
+            font-size: 64px;
+            font-weight: bold;
+            color: #f5f5f5;
+            padding: 20px 40px;
+            background-color: #323131;
+            border-radius: 10px;
+        }
+
+        .wonder h2 {
+            font-size: 40px;
+            margin-top: 20px;
+            color: #f5f5f5;
+        }
+
+        .wonder p {
+            font-size: 18px;
+            margin-top: 15px;
+            width: 70%;
+            line-height: 1.6;
+            color: #e5e5e5;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #323131;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #f5f5f5;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e5e5e5;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(47, 193, 212, 0.7);
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .services-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #f5f5f5;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .programming {
+            color: #f9f9fb;
+            background: url('code-text-colorful-symbols-programming-avfu043y2kv52wha.jpg') no-repeat center;
+            background-size: cover;
+        }
+
+        .proteomics {
+            color: #f4f4f6;
+            background: url('the-next-big-thing-in-genomics-proteomics-391565-960x540.jpg') no-repeat center;
+            background-size: cover;
+        }
+
+        .genomics {
+            color: #f7faf8;
+            background: url('dna-genetics-wallpaper-preview.jpg') no-repeat center;
+            background-size: cover;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="nav">
+        <div class="logo">BioinfoXpert</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="D:/HTML-CSS/About.html">About</a></li>
+            <li><a href="D:/HTML-CSS/Research-Articles-page.html">Research Articles</a></li>
+            <li><a href="D:/HTML-CSS/Contact-page.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="wonder">
+        <h1>Discover the Wonders of Bioinformatics</h1>
+        <h2>Welcome to BioinfoXpert</h2>
+        <p>Explore the cutting-edge domains of Bioinformatics where Proteomics, Genomics, and Programming intersect to unlock new frontiers in biological research.</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About BioinfoXpert</h1>
+        <p>BioinfoXpert is at the forefront of bioinformatics research and application. We specialize in integrating biology with cutting-edge computational tools to advance research in genomics, proteomics, and programming.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h1>Our Services</h1>
+        <div class="grid">
+            <a href="https://drive.google.com/file/d/1i2LW69nnP9XbIQnYtvYzrlwTmyXhv1hI/view?usp=sharing" target="_blank">
+                <div class="card programming">Programming</div>
+            </a>
+            <a href="https://drive.google.com/file/d/1zdx_vAyC0AorWjH_8VOZivNInv3J5tqL/view?usp=sharing" target="_blank">
+                <div class="card proteomics">Proteomics</div>
+            </a>
+            <a href="https://drive.google.com/file/d/1ZlGOqRd-1bQ3epVcBfqLeL4BlB9WcahH/view?usp=sharing" target="_blank">
+                <div class="card genomics">Genomics</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BioinfoXpert. All rights reserved.</p>
+    </footer>
+</body>
+</html>
